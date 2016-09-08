@@ -1,32 +1,32 @@
 {
-  "name": "redux-saga-coon",
+  "name": "redux-partition",
   "version": "0.0.2",
-  "description": "Redux State leaking with the help of redux-saga",
+  "description": "Redux state sharing through window events",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "scripts": {
     "test": "npm test",
     "counter": "cross-env BABEL_ENV=cjs node examples/counter/server.js",
-    "build:umd:dev": "cross-env BABEL_ENV=cjs webpack lib/index.js dist/redux-saga-coon.js --config webpack.config.dev.js",
-    "build:umd:prod": "cross-env BABEL_ENV=cjs webpack lib/index.js dist/redux-saga-coon.min.js --config webpack.config.prod.js",
+    "build:umd:dev": "cross-env BABEL_ENV=cjs webpack lib/index.js dist/redux-partition.js --config webpack.config.dev.js",
+    "build:umd:prod": "cross-env BABEL_ENV=cjs webpack lib/index.js dist/redux-partition.min.js --config webpack.config.prod.js",
     "build:es": "cross-env BABEL_ENV=es babel lib --out-dir es",
     "build": "rimraf dist es && npm run build:umd:dev && npm run build:umd:prod && npm run build:es",
     "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sosickstudios/redux-saga-coon.git"
+    "url": "git+https://github.com/sosickstudios/redux-partition.git"
   },
   "keywords": [
     "redux-saga",
-    "redux-saga-coon",
+    "redux-partition",
     "saga",
     "redux"
   ],
   "author": "Sosick Studios <bryce@sosickstudios.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sosickstudios/redux-saga-coon/issues"
+    "url": "https://github.com/sosickstudios/redux-partition/issues"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -50,7 +50,7 @@
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.12.2"
   },
-  "npmName": "redux-saga-coon",
+  "npmName": "redux-partition",
   "npmFileMap": [
     {
       "basePath": "/dist/",
