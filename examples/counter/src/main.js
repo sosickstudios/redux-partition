@@ -5,16 +5,16 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import { createCoonMiddleware } from 'redux-saga-coon'
+import { createPartitionMiddleware } from 'redux-saga-coon'
 import Counter from './components/Counter'
 import reducer from './reducers'
 import rootSaga from './sagas'
 
-const coonMiddleware = createCoonMiddleware({ channelName: 'counter-example' })
+const partitionMiddleware = createPartitionMiddleware({ channelName: 'counter-example' })
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
   reducer,
-  applyMiddleware(sagaMiddleware, coonMiddleware)
+  applyMiddleware(sagaMiddleware, partitionMiddleware)
 )
 sagaMiddleware.run(rootSaga)
 
