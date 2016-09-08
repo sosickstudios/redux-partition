@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redux Counter example</title>
+  </head>
+  <body>
+
+
+    <div id="root"></div>
+    <script>
+        let counter = 0;
+        setInterval(function(){
+            let event = new CustomEvent('counter-example', { detail: JSON.stringify({ type: 'INCREMENT', time: Date.now(), counter: counter++ })})
+            window.dispatchEvent(event);
+        }, 2000)
+    </script>
+   <script type="text/javascript" src="/static/bundle.js"></script>
+  </body>
+</html>

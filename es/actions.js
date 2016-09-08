@@ -1,0 +1,1 @@
+export var RACCOON_GLOBAL = '@@redux-saga-raccoon/GLOBAL';

@@ -1,0 +1,18 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directory
+node_modules
+
+# compiled js files
+lib
+es
+
+# docs generated files
+_book
