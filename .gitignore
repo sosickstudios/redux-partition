@@ -11,7 +11,7 @@ pids
 node_modules
 
 # compiled js files
-lib
+dist
 es
 
 # docs generated files
