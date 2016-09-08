@@ -1,6 +1,6 @@
 {
   "name": "redux-saga-coon",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Redux State leaking with the help of redux-saga",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
@@ -11,7 +11,11 @@
     "build:umd:prod": "cross-env BABEL_ENV=cjs webpack lib/index.js dist/redux-saga-coon.min.js --config webpack.config.prod.js",
     "build:es": "cross-env BABEL_ENV=es babel lib --out-dir es",
     "build": "rimraf dist es && npm run build:umd:dev && npm run build:umd:prod && npm run build:es",
-    "prepublish": "npm run check && npm run compile && npm run build"
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosickstudios/redux-saga-coon.git"
   },
   "keywords": [
     "redux-saga",
@@ -21,6 +25,9 @@
   ],
   "author": "Sosick Studios <bryce@sosickstudios.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sosickstudios/redux-saga-coon/issues"
+  },
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
